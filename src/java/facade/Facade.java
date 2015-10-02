@@ -33,7 +33,7 @@ public class Facade implements IPersonFacade {
     }
 
     @Override
-    public Person deletePerson(int PersonID) {
+    public Person deletePerson(long PersonID) {
         Person p = em.find(Person.class, PersonID);
         em.getTransaction().begin();
         em.remove(p);
