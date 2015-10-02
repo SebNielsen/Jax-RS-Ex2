@@ -59,12 +59,13 @@ public class Facade implements IPersonFacade {
     
     @Override
     public Person editPerson(Person pers) {
-        Person p = em.find(Person.class, pers.getId());
-        if (p != null) {
+            Person p = em.find(Person.class, pers.getId());
+            p.setFirstName(pers.getFirstName());
+            p.setLastName(pers.getLastName());
+            p.setPhone(pers.getPhone());
             em.getTransaction().begin();
-            p = pers;
+            em.persist(p);
             em.getTransaction().commit();
-        }
-        return p;
+            return p;
     }
 }
