@@ -17,7 +17,7 @@ import javax.persistence.Query;
  * @author sebastiannielsen
  */
 public class Facade implements IPersonFacade {
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("Ex2PU");
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory("Jax-RS-Ex2PU");
     EntityManager em = emf.createEntityManager();
     
     public Facade(){

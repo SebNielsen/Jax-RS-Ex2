@@ -29,12 +29,7 @@ public class JSONConverter {
    }
    
    public static String getJSONFromPerson(Person p) {
-       JsonObject json = new JsonObject();
-       json.addProperty("id", p.getId());
-       json.addProperty("firstName", p.getFirstName());
-       json.addProperty("lastName", p.getLastName());
-       json.addProperty("phone", p.getPhone());
-       return gson.toJson(json);
+       return gson.toJson(p);
    }
    
    public static String getJSONFromPerson(List<Person> persons) {
